@@ -1,14 +1,45 @@
 .header-base {
   display: flex;
   width: 100%;
+  background-color: red;
   justify-content: flex-end; 
 }
 
 .header-h1 {
-  padding: 1rem;
+  margin-right: 4rem;
 }
 
 .nav-base {
   display: flex;
   width: 100%;
+  background-color: gray;
 }
+
+.nav-a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+
+.nav-a:hover {
+  background-color: black;
+}
+
+.nav-a .dd {
+  display: block;
+}
+
+.dd {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
