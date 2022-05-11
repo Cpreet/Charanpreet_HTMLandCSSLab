@@ -1,7 +1,13 @@
-:root {
-  --start: 0%;
-  --end: 0%;
+@keyframes rev-bar-anim {
+  from { height: calc(100% - var(--start)); };
+  to { height: calc(100% - var(--end)); };
 }
+
+@keyframes bar-anim {
+  from { height: var(--start); };
+  to { height: var(--end); };
+}
+
 .container {
   display: flex;
   width: 100%;
@@ -37,69 +43,61 @@
 }
 
 .bar {
-  display: flex;
   height: 70%;
   width: 40px;
+  --start: 0%;
+  --end: 70%;
   flex-direction: column;
   background-color: white;
+  animation: rev-bar-anim 1s linear 1s;
 }
 
 .bar1 {
-  display: flex;
   height: 30%;
   width: 40px;
+  --start: 0%;
+  --end: 30%;
   flex-direction: column;
   background-color: #cac6c0;
+  animation: bar-anim 1s linear 1s;
 }
 
 .bar2 {
-  display: flex;
   height: 60%;
   width: 40px;
+  --start: 0%;
+  --end: 60%;
   flex-direction: column;
   background-color: white;
+  animation: rev-bar-anim 1s linear 1s;
 }
 
 .bar3 {
-  display: flex;
   height: 40%;
   width: 40px;
+  --start: 0%;
+  --end: 40%;
   flex-direction: column;
   background-color: #cac6c0;
+  animation: bar-anim 1s linear 1s;
 }
 
 .bar4 {
-  display: flex;
   height: 20%;
   width: 40px;
+  --start: 0%;
+  --end: 20%;
   flex-direction: column;
   background-color: white;
+  animation: rev-bar-anim 1s linear 1s;
 }
 
 .bar5 {
-  display: flex;
   height: 80%;
   width: 40px;
+  --start: 0%;
+  --end: 80%;
   flex-direction: column;
   background-color: #cac6c0;
-}
-
-@keyframes bar-animation {
-  from: {
-    height: var(--start);
-  }
-
-  to: {
-    height: var(--end);
-  }
-}
-
-@keyframes rev-bar-animation {
-  from: {
-    height: calc(100% - var(--start));
-  }
-
-  to: {
-    height: calc(100% - var(--end));
-  }
+  animation: bar-anim 1s linear 1s;
 }
